@@ -17,10 +17,10 @@ Start an interactive shell in the current directory:
 docker run --rm -it -v "$PWD:/work" texlive-full
 ```
 
-Compile `document.tex` to PDF:
+Compile `document.tex` to PDF with `latexmk`:
 
 ```sh
-docker run --rm -v "$PWD:/work" texlive-full pdflatex -interaction=nonstopmode -halt-on-error document.tex
+docker run --rm -v "$PWD:/work" texlive-full latexmk -pdf document.tex
 ```
 
 ## Maintenance
